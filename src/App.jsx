@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useState ,setState} from "react";
 import "./App.css";
 import FormInput from "./components/formInput";
 import "./passwordStr";
 import LoginButton from "./components/login";
-
 import { GoogleOAuthProvider } from "@react-oauth/google";
+import zxcvbn from 'zxcvbn';
+import PasswordStrength from './components/strngthPass'
 
 const clientId =
   "693817699239-1183n0eljkkk5qvq73k6hjck3m0spp77.apps.googleusercontent.com";
@@ -15,7 +16,8 @@ const App = () => {
     password: "",
   });
 
-  console.log("render");
+  const [password , setPassword] = useState('');  
+  // console.log(password);
 
   const inputs = [
     {
@@ -63,11 +65,13 @@ const App = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const data = new FormData(e.target);
-    console.log(data);
   };
+
+
 
   const onChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
+
   };
 
   return (
@@ -223,21 +227,15 @@ const App = () => {
                 key={input.id}
                 {...input}
                 value={values[inputs.name]}
-                onChange={onChange}
+                onChange={e => setPassword(e.target.value)}
               />
             ))}
             <div className="pw-display-toggle-btn">
               <i className="fa fa-eye"></i>
               <i className="fa fa-eye-slash"></i>
             </div>
-            <div className="pw-strength">
-              {/* <div className="box-1">passssss</div> */}
-              <div className="box-1"></div>
-              <div className="box-2"></div>
-              <div className="box-3"></div>
-              <div className="box-4"></div>
-              <div className="box-5"></div>
-            </div>
+            <PasswordStrength password={password} />
+
 
             <p className="privacy">
               By signing up, you are agreeing to our{" "}

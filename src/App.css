@@ -1,63 +1,69 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
-* {
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
   margin: 0;
   padding: 0;
 }
-header {
-  background-color: #fff;
+header{
+background-color: #fff;
 
-  padding: 13px 0px 8px 0px;
-  border: 0.1px solid rgb(161, 217, 250);
-  border-style: hidden hidden solid hidden;
+padding: 13px 0px 8px 0px ;
+border: .1px solid rgb(161, 217, 250);
+border-style: hidden hidden solid hidden;
 }
 
-li,
-.a-header,
-.btn-header {
-  font-family: "Inter", sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  text-decoration: none;
+li,.a-header,.btn-header {
+font-family: 'Inter', sans-serif;
+font-size: 12px;
+font-weight: 400;
+text-decoration: none;
+
+
 }
 
-#product {
+#product{
   border: none;
   background-color: #fff;
-  color: #0f185c;
-  font-family: "Inter", sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  text-decoration: none;
+  color:#0F185C;
+  font-family: 'Inter', sans-serif;
+font-size: 12px;
+font-weight: 400;
+text-decoration: none;
+
+  
 }
 
-.sign-btn {
+.sign-btn{
   width: 80px;
   height: 25px;
   font-size: 12px;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 400;
+  
 }
 
-.nav-log {
+.nav-log{
   height: 17px;
   border: 1px solid #b9b9b9;
   border-style: none none none solid;
 }
-.logo {
-  cursor: pointer;
+.logo
+{
+cursor: pointer;
 }
 
 .nav__links {
-  list-style: none;
+list-style: none;
 }
 
 .nav__links li {
-  display: inline-block;
-  padding: 0px 20px;
+
+display: inline-block;
+padding: 0px 20px;
 }
 
 .nav__links li a {
-  transition: all 0.3s ease 0s;
+transition: all 0.3s ease 0s;
 }
 
 .App {
@@ -66,15 +72,17 @@ li,
   height: 100vh;
   justify-content: center;
   background: linear-gradient(
-      rgba(255, 255, 255, 0.1),
-      rgba(255, 255, 255, 0.1)
-    ),
-    url("./Safari\ window/Vector.png");
+      rgba(255,255,255,0.1),
+      rgba(255,255,255,0.1)
+  ),
+  url("./Safari\ window/Vector.png")
+  ;
   background-size: cover;
   background-position-x: 1122%;
+
 }
 
-form {
+form{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -86,37 +94,43 @@ form {
   height: 308px;
   top: 85px;
 
-  background: #ffffff;
+  background: #FFFFFF;
 
   box-shadow: 0px 4px 20px rgba(169, 169, 169, 0.15);
   border-radius: 16px;
 }
 
-h1 {
-  font-size: 13px;
 
-  text-align: center;
+h1{
 
-  color: #16227b;
+    font-size: 13px;
+    
+    text-align: center;
+
+    color: #16227B;
+
 }
 
-button {
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  margin-top: -8px;
+button{
 
-  width: 120%;
-  height: 9%;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin-top: -8px;
 
-  background: #16227b;
-  border-radius: 25px;
-  font-size: 10px;
 
-  flex: none;
+    width: 120%;
+    height: 9%;
+
+    background: #16227B;
+    border-radius: 25px;
+    font-size: 10px;
+
+    flex: none;
+
 }
 
-.p-top {
+.p-top{
   font-style: normal;
   font-size: 9.5px;
   margin-top: -20px;
@@ -124,10 +138,11 @@ button {
   text-align: center;
   letter-spacing: 0.02em;
 
-  color: #16227b;
+  color: #16227B;
+
 }
 
-.google {
+.google{
   color: rgb(41, 41, 41);
   display: flex;
   justify-content: center;
@@ -137,13 +152,14 @@ button {
   margin-top: -6px;
   font-size: 10px;
 
-  background: #f0f2f5;
+  background: #F0F2F5;
   border-radius: 42px;
   padding-right: 9px;
   padding-top: 1px;
+
 }
 
-.privacy {
+.privacy{
   width: 220px;
   height: 20px;
 
@@ -153,73 +169,87 @@ button {
   text-align: center;
   margin-top: 15px;
   color: #778699;
+
+
 }
 
-a {
-  color: #16227b;
+a{
+  color: #16227B;
   text-decoration: none;
 }
 
-.Log {
+.Log{
+  
   font-size: 10px;
-
+ 
   text-align: center;
   margin-top: -15px;
   color: #778699;
+
+
+
 }
 
-.formInput {
+
+
+.formInput{
   margin-left: 51.5px;
 }
 
-.pw-strength {
+
+.pw-strength{
   display: flex;
   flex-direction: row;
+  
+width: 227px;
 
-  width: 227px;
 }
-.box-1,
-.box-2,
-.box-3,
-.box-5,
-.box-4 {
-  display: inline-block;
-  width: 40.8px;
-  height: 4px;
+.box-1,.box-2,.box-3,.box-5,.box-4{
+display: inline-block;
+width: 40.8px;
+height: 4px;
 
-  background: #f0f2f5;
-  border-radius: 999px;
+background: #F0F2F5;
+border-radius: 999px;
 
-  order: 0;
-  flex-grow: 1;
+order: 0;
+flex-grow: 1;
+
+
 }
 
-.box-2,
-.box-3,
-.box-5,
-.box-4 {
+.box-2,.box-3,.box-5,.box-4{
   margin-left: 2px;
 }
 
-.pw-display-toggle-btn {
-  position: absolute;
 
+
+.pw-display-toggle-btn{
+  position: absolute;
+ 
   margin-top: 170px;
   margin-left: 198px;
   cursor: pointer;
   font-size: 11px;
+
 }
 
-#search {
+
+
+
+
+
+#search{
   width: 100px;
   background-color: #fff;
   color: #535353;
-  border: 0.5px solid #b9b9b9;
+  border: .5px solid #b9b9b9;
   display: flex;
-  border-radius: 0.2rem;
+    border-radius: 0.2rem;
+
 }
 
-.fa-sharp {
+.fa-sharp{
   height: 18px;
   display: flex;
   font-size: 10px;
@@ -227,14 +257,21 @@ a {
   padding-left: 5px;
 
   color: #979797;
+
+  
+
 }
 
-nav {
+nav{
   display: flex;
   justify-content: space-between;
 }
 
-ul {
+ul{
   display: flex;
   align-items: center;
 }
+
+
+
+
