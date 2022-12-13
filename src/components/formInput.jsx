@@ -44,7 +44,7 @@ const FormInput = (props) => {
         {...inputProps}
         onChange={onChange}
         onBlur={handleFocused}
-        // type={passwordType}
+        type={passwordType}
         onFocus={() =>
           inputProps.name === "confirmPassword" && setFocused(true)
         }
