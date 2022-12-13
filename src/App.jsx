@@ -1,12 +1,11 @@
-import { useState ,setState} from "react";
+import { useState, setState } from "react";
 import "./App.css";
 import FormInput from "./components/formInput";
 import "./passwordStr";
 import LoginButton from "./components/login";
 import { GoogleOAuthProvider } from "@react-oauth/google";
-import zxcvbn from 'zxcvbn';
-import PasswordStrength from './components/strngthPass'
-
+import zxcvbn from "zxcvbn";
+import PasswordStrength from "./components/strngthPass";
 const clientId =
   "693817699239-1183n0eljkkk5qvq73k6hjck3m0spp77.apps.googleusercontent.com";
 
@@ -16,7 +15,7 @@ const App = () => {
     password: "",
   });
 
-  const [password , setPassword] = useState('');  
+  const [password, setPassword] = useState("");
   // console.log(password);
 
   const inputs = [
@@ -45,6 +44,7 @@ const App = () => {
       ),
       textindent: "3px",
       span: "errormssg1",
+      style: { display: "none" },
     },
 
     {
@@ -67,11 +67,8 @@ const App = () => {
     const data = new FormData(e.target);
   };
 
-
-
   const onChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
-
   };
 
   return (
@@ -227,16 +224,21 @@ const App = () => {
                 key={input.id}
                 {...input}
                 value={values[inputs.name]}
-                onChange={e => setPassword(e.target.value)}
+                onChange={(e) => {
+                  if (e.target.name == "password") {
+                    setPassword(e.target.value);
+                  }
+                  console.log(e.target);
+                }}
               />
             ))}
+
             <div className="pw-display-toggle-btn">
               <i className="fa fa-eye"></i>
               <i className="fa fa-eye-slash"></i>
             </div>
+
             <PasswordStrength password={password} />
-
-
             <p className="privacy">
               By signing up, you are agreeing to our{" "}
               <span>

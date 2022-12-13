@@ -29,17 +29,17 @@ label {
   text-indent: 3px;
 }
 
-.errormssg,
-.errormssg1 {
+.errormssg {
+  justify-content: space-between;
   font-size: 10.1px;
   padding: 3px;
   color: rgba(0, 0, 0, 0.45);
-  display: none;
   position: absolute;
-  margin-top: 68px;
+  margin-top: 200px;
+  /* margin-right: 0px; */
   text-align: right;
   position: absolute;
-
+  display: flex;
   width: 225px;
 }
 
@@ -64,9 +64,4 @@ input:invalid[focused="true"] ~ span {
 }
 .pw-display-toggle-btn.active i.fa-eye {
   display: none;
-}
-
-input:invalid[focused="true"] ~ svg {
-  display: none;
-  background-color: #16227b;
 }
